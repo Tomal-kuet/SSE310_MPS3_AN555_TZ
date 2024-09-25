@@ -1265,8 +1265,8 @@ Image Symbol Table
     text                                     0x21040034   Data          30  main_ns.o(.data.text)
     Image$$ARM_LIB_HEAP$$ZI$$Base            0x21040068   Number         0  anon$$obj.o ABSOLUTE
     Image$$ARM_LIB_HEAP$$ZI$$Limit           0x21040468   Number         0  anon$$obj.o ABSOLUTE
-    Image$$ARM_LIB_STACK$$ZI$$Base           0x21040480   Number         0  anon$$obj.o ABSOLUTE
-    Image$$ARM_LIB_STACK$$ZI$$Limit          0x21040878   Number         0  anon$$obj.o ABSOLUTE
+    Image$$ARM_LIB_STACK$$ZI$$Base           0x2107fbf8   Number         0  anon$$obj.o ABSOLUTE
+    Image$$ARM_LIB_STACK$$ZI$$Limit          0x2107fff8   Number         0  anon$$obj.o ABSOLUTE
 
 
 
@@ -1276,372 +1276,366 @@ Memory Map of the image
 
   Image Entry point : 0x01020241
 
-  Load Region LR_CODE (Base: 0x01020000, Size: 0x00000b20, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_ROM (Base: 0x01020000, Size: 0x00000b10, Max: 0x0001fe00, ABSOLUTE)
 
-    Execution Region ER_CODE (Exec base: 0x01020000, Load base: 0x01020000, Size: 0x00000abc, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_ROM (Exec base: 0x01020000, Load base: 0x01020000, Size: 0x00000abc, Max: 0x0001fe00, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x01020000   0x01020000   0x00000240   Data   RO          411    RESET               startup_sse310mps3.o
-    0x01020240   0x01020240   0x00000008   Code   RO          435  * !!!main             c_w.l(__main.o)
-    0x01020248   0x01020248   0x00000034   Code   RO          613    !!!scatter          c_w.l(__scatter.o)
-    0x0102027c   0x0102027c   0x0000001a   Code   RO          615    !!handler_copy      c_w.l(__scatter_copy.o)
+    0x01020000   0x01020000   0x00000240   Data   RO          409    RESET               startup_sse310mps3.o
+    0x01020240   0x01020240   0x00000008   Code   RO          433  * !!!main             c_w.l(__main.o)
+    0x01020248   0x01020248   0x00000034   Code   RO          611    !!!scatter          c_w.l(__scatter.o)
+    0x0102027c   0x0102027c   0x0000001a   Code   RO          613    !!handler_copy      c_w.l(__scatter_copy.o)
     0x01020296   0x01020296   0x00000002   PAD
-    0x01020298   0x01020298   0x0000001c   Code   RO          617    !!handler_zi        c_w.l(__scatter_zi.o)
-    0x010202b4   0x010202b4   0x00000002   Code   RO          467    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
-    0x010202b6   0x010202b6   0x00000004   Code   RO          477    .ARM.Collect$$libinit$$00000001  c_w.l(libinit2.o)
-    0x010202ba   0x010202ba   0x00000000   Code   RO          480    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
-    0x010202ba   0x010202ba   0x00000000   Code   RO          482    .ARM.Collect$$libinit$$00000006  c_w.l(libinit2.o)
-    0x010202ba   0x010202ba   0x00000000   Code   RO          485    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
-    0x010202ba   0x010202ba   0x00000000   Code   RO          487    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
-    0x010202ba   0x010202ba   0x00000000   Code   RO          489    .ARM.Collect$$libinit$$00000010  c_w.l(libinit2.o)
-    0x010202ba   0x010202ba   0x00000000   Code   RO          492    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
-    0x010202ba   0x010202ba   0x00000000   Code   RO          494    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
-    0x010202ba   0x010202ba   0x00000000   Code   RO          496    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
-    0x010202ba   0x010202ba   0x00000000   Code   RO          498    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
-    0x010202ba   0x010202ba   0x00000000   Code   RO          500    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
-    0x010202ba   0x010202ba   0x00000000   Code   RO          502    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
-    0x010202ba   0x010202ba   0x00000000   Code   RO          504    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
-    0x010202ba   0x010202ba   0x00000000   Code   RO          506    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
-    0x010202ba   0x010202ba   0x00000000   Code   RO          508    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
-    0x010202ba   0x010202ba   0x00000000   Code   RO          510    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
-    0x010202ba   0x010202ba   0x00000000   Code   RO          512    .ARM.Collect$$libinit$$00000027  c_w.l(libinit2.o)
-    0x010202ba   0x010202ba   0x00000000   Code   RO          516    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
-    0x010202ba   0x010202ba   0x00000000   Code   RO          518    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
-    0x010202ba   0x010202ba   0x00000000   Code   RO          520    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
-    0x010202ba   0x010202ba   0x00000000   Code   RO          522    .ARM.Collect$$libinit$$00000034  c_w.l(libinit2.o)
-    0x010202ba   0x010202ba   0x00000002   Code   RO          523    .ARM.Collect$$libinit$$00000035  c_w.l(libinit2.o)
-    0x010202bc   0x010202bc   0x00000002   Code   RO          552    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
-    0x010202be   0x010202be   0x00000000   Code   RO          564    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
-    0x010202be   0x010202be   0x00000000   Code   RO          566    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
-    0x010202be   0x010202be   0x00000000   Code   RO          569    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
-    0x010202be   0x010202be   0x00000000   Code   RO          572    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
-    0x010202be   0x010202be   0x00000000   Code   RO          574    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
-    0x010202be   0x010202be   0x00000000   Code   RO          577    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
-    0x010202be   0x010202be   0x00000002   Code   RO          578    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
-    0x010202c0   0x010202c0   0x00000000   Code   RO          437    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
-    0x010202c0   0x010202c0   0x00000000   Code   RO          439    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
-    0x010202c0   0x010202c0   0x00000004   Code   RO          453    .ARM.Collect$$rtentry$$00000007  c_w.l(__rtentry7.o)
-    0x010202c4   0x010202c4   0x00000000   Code   RO          441    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
-    0x010202c4   0x010202c4   0x00000004   Code   RO          442    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
-    0x010202c8   0x010202c8   0x00000000   Code   RO          444    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
-    0x010202c8   0x010202c8   0x00000008   Code   RO          445    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
-    0x010202d0   0x010202d0   0x00000004   Code   RO          454    .ARM.Collect$$rtentry$$00002718  c_w.l(__rtentry7.o)
-    0x010202d4   0x010202d4   0x00000002   Code   RO          475    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
-    0x010202d6   0x010202d6   0x00000000   Code   RO          532    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
-    0x010202d6   0x010202d6   0x00000004   Code   RO          533    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
-    0x010202da   0x010202da   0x00000006   Code   RO          534    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
-    0x010202e0   0x010202e0   0x00000012   Code   RO          460    .text               c_w.l(exit.o)
-    0x010202f2   0x010202f2   0x00000002   Code   RO          528    .text               c_w.l(use_no_semi.o)
-    0x010202f4   0x010202f4   0x00000000   Code   RO          530    .text               c_w.l(indicate_semi.o)
-    0x010202f4   0x010202f4   0x0000000c   Code   RO          542    .text               c_w.l(sys_exit.o)
-    0x01020300   0x01020300   0x00000004   Code   RO          205    .text.BRIDGE_ERROR_Handler  startup_sse310mps3.o
+    0x01020298   0x01020298   0x0000001c   Code   RO          615    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x010202b4   0x010202b4   0x00000002   Code   RO          465    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x010202b6   0x010202b6   0x00000004   Code   RO          475    .ARM.Collect$$libinit$$00000001  c_w.l(libinit2.o)
+    0x010202ba   0x010202ba   0x00000000   Code   RO          478    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x010202ba   0x010202ba   0x00000000   Code   RO          480    .ARM.Collect$$libinit$$00000006  c_w.l(libinit2.o)
+    0x010202ba   0x010202ba   0x00000000   Code   RO          483    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x010202ba   0x010202ba   0x00000000   Code   RO          485    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x010202ba   0x010202ba   0x00000000   Code   RO          487    .ARM.Collect$$libinit$$00000010  c_w.l(libinit2.o)
+    0x010202ba   0x010202ba   0x00000000   Code   RO          490    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x010202ba   0x010202ba   0x00000000   Code   RO          492    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x010202ba   0x010202ba   0x00000000   Code   RO          494    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x010202ba   0x010202ba   0x00000000   Code   RO          496    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x010202ba   0x010202ba   0x00000000   Code   RO          498    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x010202ba   0x010202ba   0x00000000   Code   RO          500    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x010202ba   0x010202ba   0x00000000   Code   RO          502    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x010202ba   0x010202ba   0x00000000   Code   RO          504    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x010202ba   0x010202ba   0x00000000   Code   RO          506    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x010202ba   0x010202ba   0x00000000   Code   RO          508    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x010202ba   0x010202ba   0x00000000   Code   RO          510    .ARM.Collect$$libinit$$00000027  c_w.l(libinit2.o)
+    0x010202ba   0x010202ba   0x00000000   Code   RO          514    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x010202ba   0x010202ba   0x00000000   Code   RO          516    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x010202ba   0x010202ba   0x00000000   Code   RO          518    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x010202ba   0x010202ba   0x00000000   Code   RO          520    .ARM.Collect$$libinit$$00000034  c_w.l(libinit2.o)
+    0x010202ba   0x010202ba   0x00000002   Code   RO          521    .ARM.Collect$$libinit$$00000035  c_w.l(libinit2.o)
+    0x010202bc   0x010202bc   0x00000002   Code   RO          550    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x010202be   0x010202be   0x00000000   Code   RO          562    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x010202be   0x010202be   0x00000000   Code   RO          564    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x010202be   0x010202be   0x00000000   Code   RO          567    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
+    0x010202be   0x010202be   0x00000000   Code   RO          570    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
+    0x010202be   0x010202be   0x00000000   Code   RO          572    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x010202be   0x010202be   0x00000000   Code   RO          575    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x010202be   0x010202be   0x00000002   Code   RO          576    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
+    0x010202c0   0x010202c0   0x00000000   Code   RO          435    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x010202c0   0x010202c0   0x00000000   Code   RO          437    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x010202c0   0x010202c0   0x00000004   Code   RO          451    .ARM.Collect$$rtentry$$00000007  c_w.l(__rtentry7.o)
+    0x010202c4   0x010202c4   0x00000000   Code   RO          439    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x010202c4   0x010202c4   0x00000004   Code   RO          440    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x010202c8   0x010202c8   0x00000000   Code   RO          442    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x010202c8   0x010202c8   0x00000008   Code   RO          443    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x010202d0   0x010202d0   0x00000004   Code   RO          452    .ARM.Collect$$rtentry$$00002718  c_w.l(__rtentry7.o)
+    0x010202d4   0x010202d4   0x00000002   Code   RO          473    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x010202d6   0x010202d6   0x00000000   Code   RO          530    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x010202d6   0x010202d6   0x00000004   Code   RO          531    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x010202da   0x010202da   0x00000006   Code   RO          532    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x010202e0   0x010202e0   0x00000012   Code   RO          458    .text               c_w.l(exit.o)
+    0x010202f2   0x010202f2   0x00000002   Code   RO          526    .text               c_w.l(use_no_semi.o)
+    0x010202f4   0x010202f4   0x00000000   Code   RO          528    .text               c_w.l(indicate_semi.o)
+    0x010202f4   0x010202f4   0x0000000c   Code   RO          540    .text               c_w.l(sys_exit.o)
+    0x01020300   0x01020300   0x00000004   Code   RO          203    .text.BRIDGE_ERROR_Handler  startup_sse310mps3.o
     0x01020304   0x01020304   0x00000004   PAD
-    0x01020308   0x01020308   0x00000004   Code   RO          173    .text.BusFault_Handler  startup_sse310mps3.o
+    0x01020308   0x01020308   0x00000004   Code   RO          171    .text.BusFault_Handler  startup_sse310mps3.o
     0x0102030c   0x0102030c   0x00000004   PAD
-    0x01020310   0x01020310   0x00000004   Code   RO          207    .text.COMBINED_PPU_Handler  startup_sse310mps3.o
+    0x01020310   0x01020310   0x00000004   Code   RO          205    .text.COMBINED_PPU_Handler  startup_sse310mps3.o
     0x01020314   0x01020314   0x00000004   PAD
-    0x01020318   0x01020318   0x00000004   Code   RO          213    .text.CPU0_CTI_0_Handler  startup_sse310mps3.o
+    0x01020318   0x01020318   0x00000004   Code   RO          211    .text.CPU0_CTI_0_Handler  startup_sse310mps3.o
     0x0102031c   0x0102031c   0x00000004   PAD
-    0x01020320   0x01020320   0x00000004   Code   RO          215    .text.CPU0_CTI_1_Handler  startup_sse310mps3.o
+    0x01020320   0x01020320   0x00000004   Code   RO          213    .text.CPU0_CTI_1_Handler  startup_sse310mps3.o
     0x01020324   0x01020324   0x00000004   PAD
-    0x01020328   0x01020328   0x00000004   Code   RO          269    .text.DMA_Ch_0_Combined_Handler  startup_sse310mps3.o
+    0x01020328   0x01020328   0x00000004   Code   RO          267    .text.DMA_Ch_0_Combined_Handler  startup_sse310mps3.o
     0x0102032c   0x0102032c   0x00000004   PAD
-    0x01020330   0x01020330   0x00000004   Code   RO          265    .text.DMA_Ch_0_Error_Handler  startup_sse310mps3.o
+    0x01020330   0x01020330   0x00000004   Code   RO          263    .text.DMA_Ch_0_Error_Handler  startup_sse310mps3.o
     0x01020334   0x01020334   0x00000004   PAD
-    0x01020338   0x01020338   0x00000004   Code   RO          267    .text.DMA_Ch_0_Terminal_Count_Handler  startup_sse310mps3.o
+    0x01020338   0x01020338   0x00000004   Code   RO          265    .text.DMA_Ch_0_Terminal_Count_Handler  startup_sse310mps3.o
     0x0102033c   0x0102033c   0x00000004   PAD
-    0x01020340   0x01020340   0x00000004   Code   RO          275    .text.DMA_Ch_1_Combined_Handler  startup_sse310mps3.o
+    0x01020340   0x01020340   0x00000004   Code   RO          273    .text.DMA_Ch_1_Combined_Handler  startup_sse310mps3.o
     0x01020344   0x01020344   0x00000004   PAD
-    0x01020348   0x01020348   0x00000004   Code   RO          271    .text.DMA_Ch_1_Error_Handler  startup_sse310mps3.o
+    0x01020348   0x01020348   0x00000004   Code   RO          269    .text.DMA_Ch_1_Error_Handler  startup_sse310mps3.o
     0x0102034c   0x0102034c   0x00000004   PAD
-    0x01020350   0x01020350   0x00000004   Code   RO          273    .text.DMA_Ch_1_Terminal_Count_Handler  startup_sse310mps3.o
+    0x01020350   0x01020350   0x00000004   Code   RO          271    .text.DMA_Ch_1_Terminal_Count_Handler  startup_sse310mps3.o
     0x01020354   0x01020354   0x00000004   PAD
-    0x01020358   0x01020358   0x00000004   Code   RO          281    .text.DMA_Ch_2_Combined_Handler  startup_sse310mps3.o
+    0x01020358   0x01020358   0x00000004   Code   RO          279    .text.DMA_Ch_2_Combined_Handler  startup_sse310mps3.o
     0x0102035c   0x0102035c   0x00000004   PAD
-    0x01020360   0x01020360   0x00000004   Code   RO          277    .text.DMA_Ch_2_Error_Handler  startup_sse310mps3.o
+    0x01020360   0x01020360   0x00000004   Code   RO          275    .text.DMA_Ch_2_Error_Handler  startup_sse310mps3.o
     0x01020364   0x01020364   0x00000004   PAD
-    0x01020368   0x01020368   0x00000004   Code   RO          279    .text.DMA_Ch_2_Terminal_Count_Handler  startup_sse310mps3.o
+    0x01020368   0x01020368   0x00000004   Code   RO          277    .text.DMA_Ch_2_Terminal_Count_Handler  startup_sse310mps3.o
     0x0102036c   0x0102036c   0x00000004   PAD
-    0x01020370   0x01020370   0x00000004   Code   RO          287    .text.DMA_Ch_3_Combined_Handler  startup_sse310mps3.o
+    0x01020370   0x01020370   0x00000004   Code   RO          285    .text.DMA_Ch_3_Combined_Handler  startup_sse310mps3.o
     0x01020374   0x01020374   0x00000004   PAD
-    0x01020378   0x01020378   0x00000004   Code   RO          283    .text.DMA_Ch_3_Error_Handler  startup_sse310mps3.o
+    0x01020378   0x01020378   0x00000004   Code   RO          281    .text.DMA_Ch_3_Error_Handler  startup_sse310mps3.o
     0x0102037c   0x0102037c   0x00000004   PAD
-    0x01020380   0x01020380   0x00000004   Code   RO          285    .text.DMA_Ch_3_Terminal_Count_Handler  startup_sse310mps3.o
+    0x01020380   0x01020380   0x00000004   Code   RO          283    .text.DMA_Ch_3_Terminal_Count_Handler  startup_sse310mps3.o
     0x01020384   0x01020384   0x00000004   PAD
-    0x01020388   0x01020388   0x00000004   Code   RO          181    .text.DebugMon_Handler  startup_sse310mps3.o
+    0x01020388   0x01020388   0x00000004   Code   RO          179    .text.DebugMon_Handler  startup_sse310mps3.o
     0x0102038c   0x0102038c   0x00000004   PAD
-    0x01020390   0x01020390   0x00000004   Code   RO          251    .text.ETHERNET_Handler  startup_sse310mps3.o
+    0x01020390   0x01020390   0x00000004   Code   RO          249    .text.ETHERNET_Handler  startup_sse310mps3.o
     0x01020394   0x01020394   0x00000004   PAD
-    0x01020398   0x01020398   0x00000004   Code   RO          299    .text.GPIO0_0_Handler  startup_sse310mps3.o
+    0x01020398   0x01020398   0x00000004   Code   RO          297    .text.GPIO0_0_Handler  startup_sse310mps3.o
     0x0102039c   0x0102039c   0x00000004   PAD
-    0x010203a0   0x010203a0   0x00000004   Code   RO          319    .text.GPIO0_10_Handler  startup_sse310mps3.o
+    0x010203a0   0x010203a0   0x00000004   Code   RO          317    .text.GPIO0_10_Handler  startup_sse310mps3.o
     0x010203a4   0x010203a4   0x00000004   PAD
-    0x010203a8   0x010203a8   0x00000004   Code   RO          321    .text.GPIO0_11_Handler  startup_sse310mps3.o
+    0x010203a8   0x010203a8   0x00000004   Code   RO          319    .text.GPIO0_11_Handler  startup_sse310mps3.o
     0x010203ac   0x010203ac   0x00000004   PAD
-    0x010203b0   0x010203b0   0x00000004   Code   RO          323    .text.GPIO0_12_Handler  startup_sse310mps3.o
+    0x010203b0   0x010203b0   0x00000004   Code   RO          321    .text.GPIO0_12_Handler  startup_sse310mps3.o
     0x010203b4   0x010203b4   0x00000004   PAD
-    0x010203b8   0x010203b8   0x00000004   Code   RO          325    .text.GPIO0_13_Handler  startup_sse310mps3.o
+    0x010203b8   0x010203b8   0x00000004   Code   RO          323    .text.GPIO0_13_Handler  startup_sse310mps3.o
     0x010203bc   0x010203bc   0x00000004   PAD
-    0x010203c0   0x010203c0   0x00000004   Code   RO          327    .text.GPIO0_14_Handler  startup_sse310mps3.o
+    0x010203c0   0x010203c0   0x00000004   Code   RO          325    .text.GPIO0_14_Handler  startup_sse310mps3.o
     0x010203c4   0x010203c4   0x00000004   PAD
-    0x010203c8   0x010203c8   0x00000004   Code   RO          329    .text.GPIO0_15_Handler  startup_sse310mps3.o
+    0x010203c8   0x010203c8   0x00000004   Code   RO          327    .text.GPIO0_15_Handler  startup_sse310mps3.o
     0x010203cc   0x010203cc   0x00000004   PAD
-    0x010203d0   0x010203d0   0x00000004   Code   RO          301    .text.GPIO0_1_Handler  startup_sse310mps3.o
+    0x010203d0   0x010203d0   0x00000004   Code   RO          299    .text.GPIO0_1_Handler  startup_sse310mps3.o
     0x010203d4   0x010203d4   0x00000004   PAD
-    0x010203d8   0x010203d8   0x00000004   Code   RO          303    .text.GPIO0_2_Handler  startup_sse310mps3.o
+    0x010203d8   0x010203d8   0x00000004   Code   RO          301    .text.GPIO0_2_Handler  startup_sse310mps3.o
     0x010203dc   0x010203dc   0x00000004   PAD
-    0x010203e0   0x010203e0   0x00000004   Code   RO          305    .text.GPIO0_3_Handler  startup_sse310mps3.o
+    0x010203e0   0x010203e0   0x00000004   Code   RO          303    .text.GPIO0_3_Handler  startup_sse310mps3.o
     0x010203e4   0x010203e4   0x00000004   PAD
-    0x010203e8   0x010203e8   0x00000004   Code   RO          307    .text.GPIO0_4_Handler  startup_sse310mps3.o
+    0x010203e8   0x010203e8   0x00000004   Code   RO          305    .text.GPIO0_4_Handler  startup_sse310mps3.o
     0x010203ec   0x010203ec   0x00000004   PAD
-    0x010203f0   0x010203f0   0x00000004   Code   RO          309    .text.GPIO0_5_Handler  startup_sse310mps3.o
+    0x010203f0   0x010203f0   0x00000004   Code   RO          307    .text.GPIO0_5_Handler  startup_sse310mps3.o
     0x010203f4   0x010203f4   0x00000004   PAD
-    0x010203f8   0x010203f8   0x00000004   Code   RO          311    .text.GPIO0_6_Handler  startup_sse310mps3.o
+    0x010203f8   0x010203f8   0x00000004   Code   RO          309    .text.GPIO0_6_Handler  startup_sse310mps3.o
     0x010203fc   0x010203fc   0x00000004   PAD
-    0x01020400   0x01020400   0x00000004   Code   RO          313    .text.GPIO0_7_Handler  startup_sse310mps3.o
+    0x01020400   0x01020400   0x00000004   Code   RO          311    .text.GPIO0_7_Handler  startup_sse310mps3.o
     0x01020404   0x01020404   0x00000004   PAD
-    0x01020408   0x01020408   0x00000004   Code   RO          315    .text.GPIO0_8_Handler  startup_sse310mps3.o
+    0x01020408   0x01020408   0x00000004   Code   RO          313    .text.GPIO0_8_Handler  startup_sse310mps3.o
     0x0102040c   0x0102040c   0x00000004   PAD
-    0x01020410   0x01020410   0x00000004   Code   RO          317    .text.GPIO0_9_Handler  startup_sse310mps3.o
+    0x01020410   0x01020410   0x00000004   Code   RO          315    .text.GPIO0_9_Handler  startup_sse310mps3.o
     0x01020414   0x01020414   0x00000004   PAD
-    0x01020418   0x01020418   0x00000004   Code   RO          291    .text.GPIO0_Combined_Handler  startup_sse310mps3.o
+    0x01020418   0x01020418   0x00000004   Code   RO          289    .text.GPIO0_Combined_Handler  startup_sse310mps3.o
     0x0102041c   0x0102041c   0x00000004   PAD
-    0x01020420   0x01020420   0x00000004   Code   RO          331    .text.GPIO1_0_Handler  startup_sse310mps3.o
+    0x01020420   0x01020420   0x00000004   Code   RO          329    .text.GPIO1_0_Handler  startup_sse310mps3.o
     0x01020424   0x01020424   0x00000004   PAD
-    0x01020428   0x01020428   0x00000004   Code   RO          351    .text.GPIO1_10_Handler  startup_sse310mps3.o
+    0x01020428   0x01020428   0x00000004   Code   RO          349    .text.GPIO1_10_Handler  startup_sse310mps3.o
     0x0102042c   0x0102042c   0x00000004   PAD
-    0x01020430   0x01020430   0x00000004   Code   RO          353    .text.GPIO1_11_Handler  startup_sse310mps3.o
+    0x01020430   0x01020430   0x00000004   Code   RO          351    .text.GPIO1_11_Handler  startup_sse310mps3.o
     0x01020434   0x01020434   0x00000004   PAD
-    0x01020438   0x01020438   0x00000004   Code   RO          355    .text.GPIO1_12_Handler  startup_sse310mps3.o
+    0x01020438   0x01020438   0x00000004   Code   RO          353    .text.GPIO1_12_Handler  startup_sse310mps3.o
     0x0102043c   0x0102043c   0x00000004   PAD
-    0x01020440   0x01020440   0x00000004   Code   RO          357    .text.GPIO1_13_Handler  startup_sse310mps3.o
+    0x01020440   0x01020440   0x00000004   Code   RO          355    .text.GPIO1_13_Handler  startup_sse310mps3.o
     0x01020444   0x01020444   0x00000004   PAD
-    0x01020448   0x01020448   0x00000004   Code   RO          359    .text.GPIO1_14_Handler  startup_sse310mps3.o
+    0x01020448   0x01020448   0x00000004   Code   RO          357    .text.GPIO1_14_Handler  startup_sse310mps3.o
     0x0102044c   0x0102044c   0x00000004   PAD
-    0x01020450   0x01020450   0x00000004   Code   RO          361    .text.GPIO1_15_Handler  startup_sse310mps3.o
+    0x01020450   0x01020450   0x00000004   Code   RO          359    .text.GPIO1_15_Handler  startup_sse310mps3.o
     0x01020454   0x01020454   0x00000004   PAD
-    0x01020458   0x01020458   0x00000004   Code   RO          333    .text.GPIO1_1_Handler  startup_sse310mps3.o
+    0x01020458   0x01020458   0x00000004   Code   RO          331    .text.GPIO1_1_Handler  startup_sse310mps3.o
     0x0102045c   0x0102045c   0x00000004   PAD
-    0x01020460   0x01020460   0x00000004   Code   RO          335    .text.GPIO1_2_Handler  startup_sse310mps3.o
+    0x01020460   0x01020460   0x00000004   Code   RO          333    .text.GPIO1_2_Handler  startup_sse310mps3.o
     0x01020464   0x01020464   0x00000004   PAD
-    0x01020468   0x01020468   0x00000004   Code   RO          337    .text.GPIO1_3_Handler  startup_sse310mps3.o
+    0x01020468   0x01020468   0x00000004   Code   RO          335    .text.GPIO1_3_Handler  startup_sse310mps3.o
     0x0102046c   0x0102046c   0x00000004   PAD
-    0x01020470   0x01020470   0x00000004   Code   RO          339    .text.GPIO1_4_Handler  startup_sse310mps3.o
+    0x01020470   0x01020470   0x00000004   Code   RO          337    .text.GPIO1_4_Handler  startup_sse310mps3.o
     0x01020474   0x01020474   0x00000004   PAD
-    0x01020478   0x01020478   0x00000004   Code   RO          341    .text.GPIO1_5_Handler  startup_sse310mps3.o
+    0x01020478   0x01020478   0x00000004   Code   RO          339    .text.GPIO1_5_Handler  startup_sse310mps3.o
     0x0102047c   0x0102047c   0x00000004   PAD
-    0x01020480   0x01020480   0x00000004   Code   RO          343    .text.GPIO1_6_Handler  startup_sse310mps3.o
+    0x01020480   0x01020480   0x00000004   Code   RO          341    .text.GPIO1_6_Handler  startup_sse310mps3.o
     0x01020484   0x01020484   0x00000004   PAD
-    0x01020488   0x01020488   0x00000004   Code   RO          345    .text.GPIO1_7_Handler  startup_sse310mps3.o
+    0x01020488   0x01020488   0x00000004   Code   RO          343    .text.GPIO1_7_Handler  startup_sse310mps3.o
     0x0102048c   0x0102048c   0x00000004   PAD
-    0x01020490   0x01020490   0x00000004   Code   RO          347    .text.GPIO1_8_Handler  startup_sse310mps3.o
+    0x01020490   0x01020490   0x00000004   Code   RO          345    .text.GPIO1_8_Handler  startup_sse310mps3.o
     0x01020494   0x01020494   0x00000004   PAD
-    0x01020498   0x01020498   0x00000004   Code   RO          349    .text.GPIO1_9_Handler  startup_sse310mps3.o
+    0x01020498   0x01020498   0x00000004   Code   RO          347    .text.GPIO1_9_Handler  startup_sse310mps3.o
     0x0102049c   0x0102049c   0x00000004   PAD
-    0x010204a0   0x010204a0   0x00000004   Code   RO          293    .text.GPIO1_Combined_Handler  startup_sse310mps3.o
+    0x010204a0   0x010204a0   0x00000004   Code   RO          291    .text.GPIO1_Combined_Handler  startup_sse310mps3.o
     0x010204a4   0x010204a4   0x00000004   PAD
-    0x010204a8   0x010204a8   0x00000004   Code   RO          363    .text.GPIO2_0_Handler  startup_sse310mps3.o
+    0x010204a8   0x010204a8   0x00000004   Code   RO          361    .text.GPIO2_0_Handler  startup_sse310mps3.o
     0x010204ac   0x010204ac   0x00000004   PAD
-    0x010204b0   0x010204b0   0x00000004   Code   RO          383    .text.GPIO2_10_Handler  startup_sse310mps3.o
+    0x010204b0   0x010204b0   0x00000004   Code   RO          381    .text.GPIO2_10_Handler  startup_sse310mps3.o
     0x010204b4   0x010204b4   0x00000004   PAD
-    0x010204b8   0x010204b8   0x00000004   Code   RO          385    .text.GPIO2_11_Handler  startup_sse310mps3.o
+    0x010204b8   0x010204b8   0x00000004   Code   RO          383    .text.GPIO2_11_Handler  startup_sse310mps3.o
     0x010204bc   0x010204bc   0x00000004   PAD
-    0x010204c0   0x010204c0   0x00000004   Code   RO          387    .text.GPIO2_12_Handler  startup_sse310mps3.o
+    0x010204c0   0x010204c0   0x00000004   Code   RO          385    .text.GPIO2_12_Handler  startup_sse310mps3.o
     0x010204c4   0x010204c4   0x00000004   PAD
-    0x010204c8   0x010204c8   0x00000004   Code   RO          389    .text.GPIO2_13_Handler  startup_sse310mps3.o
+    0x010204c8   0x010204c8   0x00000004   Code   RO          387    .text.GPIO2_13_Handler  startup_sse310mps3.o
     0x010204cc   0x010204cc   0x00000004   PAD
-    0x010204d0   0x010204d0   0x00000004   Code   RO          391    .text.GPIO2_14_Handler  startup_sse310mps3.o
+    0x010204d0   0x010204d0   0x00000004   Code   RO          389    .text.GPIO2_14_Handler  startup_sse310mps3.o
     0x010204d4   0x010204d4   0x00000004   PAD
-    0x010204d8   0x010204d8   0x00000004   Code   RO          393    .text.GPIO2_15_Handler  startup_sse310mps3.o
+    0x010204d8   0x010204d8   0x00000004   Code   RO          391    .text.GPIO2_15_Handler  startup_sse310mps3.o
     0x010204dc   0x010204dc   0x00000004   PAD
-    0x010204e0   0x010204e0   0x00000004   Code   RO          365    .text.GPIO2_1_Handler  startup_sse310mps3.o
+    0x010204e0   0x010204e0   0x00000004   Code   RO          363    .text.GPIO2_1_Handler  startup_sse310mps3.o
     0x010204e4   0x010204e4   0x00000004   PAD
-    0x010204e8   0x010204e8   0x00000004   Code   RO          367    .text.GPIO2_2_Handler  startup_sse310mps3.o
+    0x010204e8   0x010204e8   0x00000004   Code   RO          365    .text.GPIO2_2_Handler  startup_sse310mps3.o
     0x010204ec   0x010204ec   0x00000004   PAD
-    0x010204f0   0x010204f0   0x00000004   Code   RO          369    .text.GPIO2_3_Handler  startup_sse310mps3.o
+    0x010204f0   0x010204f0   0x00000004   Code   RO          367    .text.GPIO2_3_Handler  startup_sse310mps3.o
     0x010204f4   0x010204f4   0x00000004   PAD
-    0x010204f8   0x010204f8   0x00000004   Code   RO          371    .text.GPIO2_4_Handler  startup_sse310mps3.o
+    0x010204f8   0x010204f8   0x00000004   Code   RO          369    .text.GPIO2_4_Handler  startup_sse310mps3.o
     0x010204fc   0x010204fc   0x00000004   PAD
-    0x01020500   0x01020500   0x00000004   Code   RO          373    .text.GPIO2_5_Handler  startup_sse310mps3.o
+    0x01020500   0x01020500   0x00000004   Code   RO          371    .text.GPIO2_5_Handler  startup_sse310mps3.o
     0x01020504   0x01020504   0x00000004   PAD
-    0x01020508   0x01020508   0x00000004   Code   RO          375    .text.GPIO2_6_Handler  startup_sse310mps3.o
+    0x01020508   0x01020508   0x00000004   Code   RO          373    .text.GPIO2_6_Handler  startup_sse310mps3.o
     0x0102050c   0x0102050c   0x00000004   PAD
-    0x01020510   0x01020510   0x00000004   Code   RO          377    .text.GPIO2_7_Handler  startup_sse310mps3.o
+    0x01020510   0x01020510   0x00000004   Code   RO          375    .text.GPIO2_7_Handler  startup_sse310mps3.o
     0x01020514   0x01020514   0x00000004   PAD
-    0x01020518   0x01020518   0x00000004   Code   RO          379    .text.GPIO2_8_Handler  startup_sse310mps3.o
+    0x01020518   0x01020518   0x00000004   Code   RO          377    .text.GPIO2_8_Handler  startup_sse310mps3.o
     0x0102051c   0x0102051c   0x00000004   PAD
-    0x01020520   0x01020520   0x00000004   Code   RO          381    .text.GPIO2_9_Handler  startup_sse310mps3.o
+    0x01020520   0x01020520   0x00000004   Code   RO          379    .text.GPIO2_9_Handler  startup_sse310mps3.o
     0x01020524   0x01020524   0x00000004   PAD
-    0x01020528   0x01020528   0x00000004   Code   RO          295    .text.GPIO2_Combined_Handler  startup_sse310mps3.o
+    0x01020528   0x01020528   0x00000004   Code   RO          293    .text.GPIO2_Combined_Handler  startup_sse310mps3.o
     0x0102052c   0x0102052c   0x00000004   PAD
-    0x01020530   0x01020530   0x00000004   Code   RO          395    .text.GPIO3_0_Handler  startup_sse310mps3.o
+    0x01020530   0x01020530   0x00000004   Code   RO          393    .text.GPIO3_0_Handler  startup_sse310mps3.o
     0x01020534   0x01020534   0x00000004   PAD
-    0x01020538   0x01020538   0x00000004   Code   RO          397    .text.GPIO3_1_Handler  startup_sse310mps3.o
+    0x01020538   0x01020538   0x00000004   Code   RO          395    .text.GPIO3_1_Handler  startup_sse310mps3.o
     0x0102053c   0x0102053c   0x00000004   PAD
-    0x01020540   0x01020540   0x00000004   Code   RO          399    .text.GPIO3_2_Handler  startup_sse310mps3.o
+    0x01020540   0x01020540   0x00000004   Code   RO          397    .text.GPIO3_2_Handler  startup_sse310mps3.o
     0x01020544   0x01020544   0x00000004   PAD
-    0x01020548   0x01020548   0x00000004   Code   RO          401    .text.GPIO3_3_Handler  startup_sse310mps3.o
+    0x01020548   0x01020548   0x00000004   Code   RO          399    .text.GPIO3_3_Handler  startup_sse310mps3.o
     0x0102054c   0x0102054c   0x00000004   PAD
-    0x01020550   0x01020550   0x00000004   Code   RO          297    .text.GPIO3_Combined_Handler  startup_sse310mps3.o
+    0x01020550   0x01020550   0x00000004   Code   RO          295    .text.GPIO3_Combined_Handler  startup_sse310mps3.o
     0x01020554   0x01020554   0x00000004   PAD
-    0x01020558   0x01020558   0x00000004   Code   RO          169    .text.HardFault_Handler  startup_sse310mps3.o
+    0x01020558   0x01020558   0x00000004   Code   RO          167    .text.HardFault_Handler  startup_sse310mps3.o
     0x0102055c   0x0102055c   0x00000004   PAD
-    0x01020560   0x01020560   0x00000004   Code   RO          253    .text.I2S_Handler   startup_sse310mps3.o
+    0x01020560   0x01020560   0x00000004   Code   RO          251    .text.I2S_Handler   startup_sse310mps3.o
     0x01020564   0x01020564   0x00000004   PAD
-    0x01020568   0x01020568   0x00000004   Code   RO          199    .text.MPC_Handler   startup_sse310mps3.o
+    0x01020568   0x01020568   0x00000004   Code   RO          197    .text.MPC_Handler   startup_sse310mps3.o
     0x0102056c   0x0102056c   0x00000004   PAD
-    0x01020570   0x01020570   0x00000004   Code   RO          203    .text.MSC_Handler   startup_sse310mps3.o
+    0x01020570   0x01020570   0x00000004   Code   RO          201    .text.MSC_Handler   startup_sse310mps3.o
     0x01020574   0x01020574   0x00000004   PAD
-    0x01020578   0x01020578   0x00000004   Code   RO          171    .text.MemManage_Handler  startup_sse310mps3.o
+    0x01020578   0x01020578   0x00000004   Code   RO          169    .text.MemManage_Handler  startup_sse310mps3.o
     0x0102057c   0x0102057c   0x00000004   PAD
-    0x01020580   0x01020580   0x00000004   Code   RO          167    .text.NMI_Handler   startup_sse310mps3.o
+    0x01020580   0x01020580   0x00000004   Code   RO          165    .text.NMI_Handler   startup_sse310mps3.o
     0x01020584   0x01020584   0x00000004   PAD
-    0x01020588   0x01020588   0x00000004   Code   RO          189    .text.NONSEC_WATCHDOG_Handler  startup_sse310mps3.o
+    0x01020588   0x01020588   0x00000004   Code   RO          187    .text.NONSEC_WATCHDOG_Handler  startup_sse310mps3.o
     0x0102058c   0x0102058c   0x00000004   PAD
-    0x01020590   0x01020590   0x00000004   Code   RO          187    .text.NONSEC_WATCHDOG_RESET_REQ_Handler  startup_sse310mps3.o
+    0x01020590   0x01020590   0x00000004   Code   RO          185    .text.NONSEC_WATCHDOG_RESET_REQ_Handler  startup_sse310mps3.o
     0x01020594   0x01020594   0x00000004   PAD
-    0x01020598   0x01020598   0x00000004   Code   RO          289    .text.NPU0_Handler  startup_sse310mps3.o
+    0x01020598   0x01020598   0x00000004   Code   RO          287    .text.NPU0_Handler  startup_sse310mps3.o
     0x0102059c   0x0102059c   0x00000004   PAD
-    0x010205a0   0x010205a0   0x00000004   Code   RO          201    .text.PPC_Handler   startup_sse310mps3.o
+    0x010205a0   0x010205a0   0x00000004   Code   RO          199    .text.PPC_Handler   startup_sse310mps3.o
     0x010205a4   0x010205a4   0x00000004   PAD
-    0x010205a8   0x010205a8   0x00000004   Code   RO          183    .text.PendSV_Handler  startup_sse310mps3.o
+    0x010205a8   0x010205a8   0x00000004   Code   RO          181    .text.PendSV_Handler  startup_sse310mps3.o
     0x010205ac   0x010205ac   0x00000004   PAD
-    0x010205b0   0x010205b0   0x0000001a   Code   RO          409    .text.Reset_Handler  startup_sse310mps3.o
+    0x010205b0   0x010205b0   0x0000001a   Code   RO          407    .text.Reset_Handler  startup_sse310mps3.o
     0x010205ca   0x010205ca   0x00000006   PAD
-    0x010205d0   0x010205d0   0x00000004   Code   RO          191    .text.SLOWCLK_Timer_Handler  startup_sse310mps3.o
+    0x010205d0   0x010205d0   0x00000004   Code   RO          189    .text.SLOWCLK_Timer_Handler  startup_sse310mps3.o
     0x010205d4   0x010205d4   0x00000004   PAD
-    0x010205d8   0x010205d8   0x00000004   Code   RO          259    .text.SPI_ADC_Handler  startup_sse310mps3.o
+    0x010205d8   0x010205d8   0x00000004   Code   RO          257    .text.SPI_ADC_Handler  startup_sse310mps3.o
     0x010205dc   0x010205dc   0x00000004   PAD
-    0x010205e0   0x010205e0   0x00000004   Code   RO          261    .text.SPI_SHIELD0_Handler  startup_sse310mps3.o
+    0x010205e0   0x010205e0   0x00000004   Code   RO          259    .text.SPI_SHIELD0_Handler  startup_sse310mps3.o
     0x010205e4   0x010205e4   0x00000004   PAD
-    0x010205e8   0x010205e8   0x00000004   Code   RO          263    .text.SPI_SHIELD1_Handler  startup_sse310mps3.o
+    0x010205e8   0x010205e8   0x00000004   Code   RO          261    .text.SPI_SHIELD1_Handler  startup_sse310mps3.o
     0x010205ec   0x010205ec   0x00000004   PAD
-    0x010205f0   0x010205f0   0x00000004   Code   RO          179    .text.SVC_Handler   startup_sse310mps3.o
+    0x010205f0   0x010205f0   0x00000004   Code   RO          177    .text.SVC_Handler   startup_sse310mps3.o
     0x010205f4   0x010205f4   0x00000004   PAD
-    0x010205f8   0x010205f8   0x00000004   Code   RO          177    .text.SecureFault_Handler  startup_sse310mps3.o
+    0x010205f8   0x010205f8   0x00000004   Code   RO          175    .text.SecureFault_Handler  startup_sse310mps3.o
     0x010205fc   0x010205fc   0x00000004   PAD
-    0x01020600   0x01020600   0x00000004   Code   RO          185    .text.SysTick_Handler  startup_sse310mps3.o
+    0x01020600   0x01020600   0x00000004   Code   RO          183    .text.SysTick_Handler  startup_sse310mps3.o
     0x01020604   0x01020604   0x00000004   PAD
-    0x01020608   0x01020608   0x0000001e   Code   RO          419    .text.SystemCoreClockUpdate  system_sse310mps3.o
+    0x01020608   0x01020608   0x0000001e   Code   RO          417    .text.SystemCoreClockUpdate  system_sse310mps3.o
     0x01020626   0x01020626   0x00000002   PAD
-    0x01020628   0x01020628   0x00000136   Code   RO          421    .text.SystemInit    system_sse310mps3.o
+    0x01020628   0x01020628   0x00000136   Code   RO          419    .text.SystemInit    system_sse310mps3.o
     0x0102075e   0x0102075e   0x00000002   PAD
-    0x01020760   0x01020760   0x00000004   Code   RO          217    .text.System_Timestamp_Counter_Handler  startup_sse310mps3.o
+    0x01020760   0x01020760   0x00000004   Code   RO          215    .text.System_Timestamp_Counter_Handler  startup_sse310mps3.o
     0x01020764   0x01020764   0x00000004   PAD
-    0x01020768   0x01020768   0x00000004   Code   RO          193    .text.TFM_TIMER0_IRQ_Handler  startup_sse310mps3.o
+    0x01020768   0x01020768   0x00000004   Code   RO          191    .text.TFM_TIMER0_IRQ_Handler  startup_sse310mps3.o
     0x0102076c   0x0102076c   0x00000004   PAD
-    0x01020770   0x01020770   0x00000004   Code   RO          195    .text.TIMER1_Handler  startup_sse310mps3.o
+    0x01020770   0x01020770   0x00000004   Code   RO          193    .text.TIMER1_Handler  startup_sse310mps3.o
     0x01020774   0x01020774   0x00000004   PAD
-    0x01020778   0x01020778   0x00000004   Code   RO          197    .text.TIMER2_Handler  startup_sse310mps3.o
+    0x01020778   0x01020778   0x00000004   Code   RO          195    .text.TIMER2_Handler  startup_sse310mps3.o
     0x0102077c   0x0102077c   0x00000004   PAD
-    0x01020780   0x01020780   0x00000004   Code   RO          211    .text.TIMER3_AON_Handler  startup_sse310mps3.o
+    0x01020780   0x01020780   0x00000004   Code   RO          209    .text.TIMER3_AON_Handler  startup_sse310mps3.o
     0x01020784   0x01020784   0x00000004   PAD
-    0x01020788   0x01020788   0x00000004   Code   RO          255    .text.TOUCH_SCREEN_Handler  startup_sse310mps3.o
+    0x01020788   0x01020788   0x00000004   Code   RO          253    .text.TOUCH_SCREEN_Handler  startup_sse310mps3.o
     0x0102078c   0x0102078c   0x00000004   PAD
-    0x01020790   0x01020790   0x00000004   Code   RO          239    .text.UART0_Combined_Handler  startup_sse310mps3.o
+    0x01020790   0x01020790   0x00000004   Code   RO          237    .text.UART0_Combined_Handler  startup_sse310mps3.o
     0x01020794   0x01020794   0x00000004   PAD
-    0x01020798   0x01020798   0x00000004   Code   RO          241    .text.UART1_Combined_Handler  startup_sse310mps3.o
+    0x01020798   0x01020798   0x00000004   Code   RO          239    .text.UART1_Combined_Handler  startup_sse310mps3.o
     0x0102079c   0x0102079c   0x00000004   PAD
-    0x010207a0   0x010207a0   0x00000004   Code   RO          243    .text.UART2_Combined_Handler  startup_sse310mps3.o
+    0x010207a0   0x010207a0   0x00000004   Code   RO          241    .text.UART2_Combined_Handler  startup_sse310mps3.o
     0x010207a4   0x010207a4   0x00000004   PAD
-    0x010207a8   0x010207a8   0x00000004   Code   RO          245    .text.UART3_Combined_Handler  startup_sse310mps3.o
+    0x010207a8   0x010207a8   0x00000004   Code   RO          243    .text.UART3_Combined_Handler  startup_sse310mps3.o
     0x010207ac   0x010207ac   0x00000004   PAD
-    0x010207b0   0x010207b0   0x00000004   Code   RO          247    .text.UART4_Combined_Handler  startup_sse310mps3.o
+    0x010207b0   0x010207b0   0x00000004   Code   RO          245    .text.UART4_Combined_Handler  startup_sse310mps3.o
     0x010207b4   0x010207b4   0x00000004   PAD
-    0x010207b8   0x010207b8   0x00000004   Code   RO          407    .text.UART5_Combined_Handler  startup_sse310mps3.o
+    0x010207b8   0x010207b8   0x00000004   Code   RO          405    .text.UART5_Combined_Handler  startup_sse310mps3.o
     0x010207bc   0x010207bc   0x00000004   PAD
-    0x010207c0   0x010207c0   0x00000004   Code   RO          249    .text.UARTOVF_Handler  startup_sse310mps3.o
+    0x010207c0   0x010207c0   0x00000004   Code   RO          247    .text.UARTOVF_Handler  startup_sse310mps3.o
     0x010207c4   0x010207c4   0x00000004   PAD
-    0x010207c8   0x010207c8   0x00000082   Code   RO           18    .text.UARTRX0_Handler  driver_usart.o
+    0x010207c8   0x010207c8   0x00000082   Code   RO           16    .text.UARTRX0_Handler  driver_usart.o
     0x0102084a   0x0102084a   0x00000006   PAD
-    0x01020850   0x01020850   0x00000004   Code   RO          223    .text.UARTRX1_Handler  startup_sse310mps3.o
+    0x01020850   0x01020850   0x00000004   Code   RO          221    .text.UARTRX1_Handler  startup_sse310mps3.o
     0x01020854   0x01020854   0x00000004   PAD
-    0x01020858   0x01020858   0x00000004   Code   RO          227    .text.UARTRX2_Handler  startup_sse310mps3.o
+    0x01020858   0x01020858   0x00000004   Code   RO          225    .text.UARTRX2_Handler  startup_sse310mps3.o
     0x0102085c   0x0102085c   0x00000004   PAD
-    0x01020860   0x01020860   0x00000004   Code   RO          231    .text.UARTRX3_Handler  startup_sse310mps3.o
+    0x01020860   0x01020860   0x00000004   Code   RO          229    .text.UARTRX3_Handler  startup_sse310mps3.o
     0x01020864   0x01020864   0x00000004   PAD
-    0x01020868   0x01020868   0x00000004   Code   RO          235    .text.UARTRX4_Handler  startup_sse310mps3.o
+    0x01020868   0x01020868   0x00000004   Code   RO          233    .text.UARTRX4_Handler  startup_sse310mps3.o
     0x0102086c   0x0102086c   0x00000004   PAD
-    0x01020870   0x01020870   0x00000004   Code   RO          403    .text.UARTRX5_Handler  startup_sse310mps3.o
+    0x01020870   0x01020870   0x00000004   Code   RO          401    .text.UARTRX5_Handler  startup_sse310mps3.o
     0x01020874   0x01020874   0x00000004   PAD
-    0x01020878   0x01020878   0x00000076   Code   RO           20    .text.UARTTX0_Handler  driver_usart.o
+    0x01020878   0x01020878   0x00000076   Code   RO           18    .text.UARTTX0_Handler  driver_usart.o
     0x010208ee   0x010208ee   0x00000002   PAD
-    0x010208f0   0x010208f0   0x00000004   Code   RO          225    .text.UARTTX1_Handler  startup_sse310mps3.o
+    0x010208f0   0x010208f0   0x00000004   Code   RO          223    .text.UARTTX1_Handler  startup_sse310mps3.o
     0x010208f4   0x010208f4   0x00000004   PAD
-    0x010208f8   0x010208f8   0x00000004   Code   RO          229    .text.UARTTX2_Handler  startup_sse310mps3.o
+    0x010208f8   0x010208f8   0x00000004   Code   RO          227    .text.UARTTX2_Handler  startup_sse310mps3.o
     0x010208fc   0x010208fc   0x00000004   PAD
-    0x01020900   0x01020900   0x00000004   Code   RO          233    .text.UARTTX3_Handler  startup_sse310mps3.o
+    0x01020900   0x01020900   0x00000004   Code   RO          231    .text.UARTTX3_Handler  startup_sse310mps3.o
     0x01020904   0x01020904   0x00000004   PAD
-    0x01020908   0x01020908   0x00000004   Code   RO          237    .text.UARTTX4_Handler  startup_sse310mps3.o
+    0x01020908   0x01020908   0x00000004   Code   RO          235    .text.UARTTX4_Handler  startup_sse310mps3.o
     0x0102090c   0x0102090c   0x00000004   PAD
-    0x01020910   0x01020910   0x00000004   Code   RO          405    .text.UARTTX5_Handler  startup_sse310mps3.o
+    0x01020910   0x01020910   0x00000004   Code   RO          403    .text.UARTTX5_Handler  startup_sse310mps3.o
     0x01020914   0x01020914   0x00000004   PAD
-    0x01020918   0x01020918   0x00000004   Code   RO          257    .text.USB_Handler   startup_sse310mps3.o
+    0x01020918   0x01020918   0x00000004   Code   RO          255    .text.USB_Handler   startup_sse310mps3.o
     0x0102091c   0x0102091c   0x00000004   PAD
-    0x01020920   0x01020920   0x00000004   Code   RO          175    .text.UsageFault_Handler  startup_sse310mps3.o
+    0x01020920   0x01020920   0x00000004   Code   RO          173    .text.UsageFault_Handler  startup_sse310mps3.o
     0x01020924   0x01020924   0x00000004   PAD
-    0x01020928   0x01020928   0x00000064   Code   RO            7    .text.main          main_ns.o
+    0x01020928   0x01020928   0x00000064   Code   RO            5    .text.main          main_ns.o
     0x0102098c   0x0102098c   0x00000004   PAD
-    0x01020990   0x01020990   0x00000056   Code   RO          148    .text.uart_cmsdk_clear_interrupt  uart_cmsdk_drv.o
+    0x01020990   0x01020990   0x00000056   Code   RO          146    .text.uart_cmsdk_clear_interrupt  uart_cmsdk_drv.o
     0x010209e6   0x010209e6   0x00000002   PAD
-    0x010209e8   0x010209e8   0x0000003a   Code   RO          136    .text.uart_cmsdk_read  uart_cmsdk_drv.o
+    0x010209e8   0x010209e8   0x0000003a   Code   RO          134    .text.uart_cmsdk_read  uart_cmsdk_drv.o
     0x01020a22   0x01020a22   0x00000006   PAD
-    0x01020a28   0x01020a28   0x0000003a   Code   RO          138    .text.uart_cmsdk_write  uart_cmsdk_drv.o
-    0x01020a62   0x01020a62   0x0000000a   Ven    RO          619    Veneer$$Code        anon$$obj.o
-    0x01020a6c   0x01020a6c   0x0000000a   Ven    RO          620    Veneer$$Code        anon$$obj.o
-    0x01020a76   0x01020a76   0x0000001e   Code   RO          540    x$fpl$fpinit        fz_wv.l(fpinit_81m.o)
-    0x01020a94   0x01020a94   0x00000008   Data   RO          114    .rodata.UART0_CMSDK_DEV_CFG_S  device_definition.o
-    0x01020a9c   0x01020a9c   0x00000020   Data   RO          612    Region$$Table       anon$$obj.o
+    0x01020a28   0x01020a28   0x0000003a   Code   RO          136    .text.uart_cmsdk_write  uart_cmsdk_drv.o
+    0x01020a62   0x01020a62   0x0000000a   Ven    RO          617    Veneer$$Code        anon$$obj.o
+    0x01020a6c   0x01020a6c   0x0000000a   Ven    RO          618    Veneer$$Code        anon$$obj.o
+    0x01020a76   0x01020a76   0x0000001e   Code   RO          538    x$fpl$fpinit        fz_wv.l(fpinit_81m.o)
+    0x01020a94   0x01020a94   0x00000008   Data   RO          112    .rodata.UART0_CMSDK_DEV_CFG_S  device_definition.o
+    0x01020a9c   0x01020a9c   0x00000020   Data   RO          610    Region$$Table       anon$$obj.o
 
 
-    Execution Region CODE_WATERMARK (Exec base: 0x01020abc, Load base: 0x01020abc, Size: 0x00000000, Max: 0x00000000, ABSOLUTE)
-
-    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
-
-    0x01020abc        -       0x00000000   Zero   RW            1    CODE_WATERMARK.bss  anon$$obj.o
-
-
-    Execution Region ER_DATA (Exec base: 0x21040000, Load base: 0x01020abc, Size: 0x00000064, Max: 0xffffffff, ABSOLUTE)
+    Execution Region RW_RAM (Exec base: 0x21040000, Load base: 0x01020abc, Size: 0x00000064, Max: 0x0003f800, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x21040000   0x01020abc   0x00000024   Data   RW           76    .data.Driver_USART0_DEV  driver_usart.o
-    0x21040024   0x01020ae0   0x00000004   Data   RW          424    .data.PeripheralClock  system_sse310mps3.o
-    0x21040028   0x01020ae4   0x00000004   Data   RW          423    .data.SystemCoreClock  system_sse310mps3.o
-    0x2104002c   0x01020ae8   0x00000008   Data   RW          116    .data.UART0_CMSDK_DEV_S  device_definition.o
-    0x21040034   0x01020af0   0x0000001e   Data   RW            9    .data.text          main_ns.o
+    0x21040000   0x01020abc   0x00000024   Data   RW           74    .data.Driver_USART0_DEV  driver_usart.o
+    0x21040024   0x01020ae0   0x00000004   Data   RW          422    .data.PeripheralClock  system_sse310mps3.o
+    0x21040028   0x01020ae4   0x00000004   Data   RW          421    .data.SystemCoreClock  system_sse310mps3.o
+    0x2104002c   0x01020ae8   0x00000008   Data   RW          114    .data.UART0_CMSDK_DEV_S  device_definition.o
+    0x21040034   0x01020af0   0x0000001e   Data   RW            7    .data.text          main_ns.o
     0x21040052   0x01020b0e   0x00000002   PAD
-    0x21040054        -       0x0000000c   Zero   RW          115    .bss.UART0_CMSDK_DEV_DATA_S  device_definition.o
-    0x21040060        -       0x00000004   Zero   RW           10    .bss.x              main_ns.o
+    0x21040054        -       0x0000000c   Zero   RW          113    .bss.UART0_CMSDK_DEV_DATA_S  device_definition.o
+    0x21040060        -       0x00000004   Zero   RW            8    .bss.x              main_ns.o
 
 
     Execution Region ARM_LIB_HEAP (Exec base: 0x21040068, Load base: 0x01020b10, Size: 0x00000400, Max: 0x00000400, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x21040068        -       0x00000400   Zero   RW            2    ARM_LIB_HEAP.bss    anon$$obj.o
+    0x21040068        -       0x00000400   Zero   RW            1    ARM_LIB_HEAP.bss    anon$$obj.o
 
 
-    Execution Region ARM_LIB_STACK (Exec base: 0x21040480, Load base: 0x01020b20, Size: 0x000003f8, Max: 0x000003f8, ABSOLUTE)
-
-    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
-
-    0x21040480        -       0x000003f8   Zero   RW            3    ARM_LIB_STACK.bss   anon$$obj.o
-
-
-    Execution Region STACKSEAL (Exec base: 0x21040878, Load base: 0x01020b20, Size: 0x00000008, Max: 0x00000008, ABSOLUTE)
+    Execution Region ARM_LIB_STACK (Exec base: 0x2107fbf8, Load base: 0x01020b10, Size: 0x00000400, Max: 0x00000400, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x21040878        -       0x00000008   Zero   RW            4    STACKSEAL.bss       anon$$obj.o
+    0x2107fbf8        -       0x00000400   Zero   RW            2    ARM_LIB_STACK.bss   anon$$obj.o
 
 
-    Execution Region SRAM_WATERMARK (Exec base: 0x21040880, Load base: 0x01020b20, Size: 0x00000000, Max: 0x00000000, ABSOLUTE)
+    Execution Region STACKSEAL (Exec base: 0x2107fff8, Load base: 0x01020b10, Size: 0x00000008, Max: 0x00000008, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x21040880        -       0x00000000   Zero   RW            5    SRAM_WATERMARK.bss  anon$$obj.o
+    0x2107fff8        -       0x00000008   Zero   RW            3    STACKSEAL.bss       anon$$obj.o
+
+
+
+  Load Region LR_CMSE_VENEER (Base: 0x0103fe00, Size: 0x00000000, Max: 0x00000200, ABSOLUTE)
+
+    Execution Region ER_CMSE_VENEER (Exec base: 0x0103fe00, Load base: 0x0103fe00, Size: 0x00000000, Max: 0x00000200, ABSOLUTE)
+
+    **** No section assigned to this execution region ****
 
 
 ==============================================================================
@@ -1651,16 +1645,16 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-         0          0          8          8         12       1147   device_definition.o
-       248          0          0         36          0      12557   driver_usart.o
-       100          0          0         30          4       1103   main_ns.o
-       498          0        576          0          0      10655   startup_sse310mps3.o
-       340          0          0          8          0       2783   system_sse310mps3.o
-       202          0          0          0          0       5178   uart_cmsdk_drv.o
+         0          0          8          8         12       1115   device_definition.o
+       248          0          0         36          0      12525   driver_usart.o
+       100          0          0         30          4       1071   main_ns.o
+       498          0        576          0          0      10623   startup_sse310mps3.o
+       340          0          0          8          0       2751   system_sse310mps3.o
+       202          0          0          0          0       5146   uart_cmsdk_drv.o
 
     ----------------------------------------------------------------------
-      1910          0        616         84       2064      33423   Object Totals
-        20          0         32          0       2048          0   (incl. Generated)
+      1910          0        616         84       2072      33231   Object Totals
+        20          0         32          0       2056          0   (incl. Generated)
        502          0          0          2          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
@@ -1707,14 +1701,14 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      2132         16        616         84       2064      33891   Grand Totals
-      2132         16        616         84       2064      33891   ELF Image Totals
+      2132         16        616         84       2072      33699   Grand Totals
+      2132         16        616         84       2072      33699   ELF Image Totals
       2132         16        616         84          0          0   ROM Totals
 
 ==============================================================================
 
     Total RO  Size (Code + RO Data)                 2748 (   2.68kB)
-    Total RW  Size (RW Data + ZI Data)              2148 (   2.10kB)
+    Total RW  Size (RW Data + ZI Data)              2156 (   2.11kB)
     Total ROM Size (Code + RO Data + RW Data)       2832 (   2.77kB)
 
 ==============================================================================

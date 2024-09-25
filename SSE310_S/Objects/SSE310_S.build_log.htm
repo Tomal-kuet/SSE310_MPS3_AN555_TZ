@@ -21,8 +21,8 @@ Target DLL:      CMSIS_AGDI_V8M.DLL V1.7.17.0
 Dialog DLL:      TCM.DLL V1.56.1.0
  
 <h2>Project:</h2>
-C:\Users\dakum\OneDrive\Desktop\projects\code-CFA-with-pac\Evaluation\TrustZoneV8.1m85\SSE310\SSE310_S\SSE310_S.uvprojx
-Project File Date:  09/19/2024
+C:\Users\dakum\OneDrive\Desktop\projects\SSE310_MPS3_AN555_TZ\SSE310_S\SSE310_S.uvprojx
+Project File Date:  09/25/2024
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.18', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
@@ -31,8 +31,8 @@ compiling device_definition.c...
 compiling stdout_USART.c...
 compiling retarget_io.c...
 compiling main.c...
-compiling system_SSE310MPS3.c...
 compiling uart_cmsdk_drv.c...
+compiling system_SSE310MPS3.c...
 compiling Driver_USART.c...
 compiling startup_SSE310MPS3.c...
 linking...
@@ -81,9 +81,9 @@ Package Vendor: Keil
       Include file:  CMSIS/Driver/Include/Driver_USART.h
 
    * Component: ARM::CMSIS Driver:USART:1.1.0
-      Source file:   CMSIS_Driver/Driver_USART.c
-      Include file:  CMSIS_Driver/Driver_USART_Common.h
       Include file:  CMSIS_Driver/Driver_USART_CMSDK.h
+      Include file:  CMSIS_Driver/Driver_USART_Common.h
+      Source file:   CMSIS_Driver/Driver_USART.c
 
    * Component: ARM::CMSIS:CORE:6.0.0
       Source file:   CMSIS/Core/Template/ARMv8-M/tz_context.c
@@ -91,21 +91,21 @@ Package Vendor: Keil
       Source file:   CMSIS/Core/Template/ARMv8-M/main_s.c
 
    * Component: ARM::Device:Definition:2.0.0
-      Include file:  Board/Platform/platform_base_address.h
-      Include file:  Board/Device_Definition/device_definition.h
       Include file:  CMSIS_Driver/Config/cmsis_driver_config.h
-      Source file:   Board/Device_Definition/device_definition.c
       Include file:  Device/Config/device_cfg.h
+      Include file:  Board/Device_Definition/device_definition.h
+      Include file:  Board/Platform/platform_base_address.h
+      Source file:   Board/Device_Definition/device_definition.c
 
    * Component: ARM::Device:Native Driver:UART:1.1.0
       Source file:   Device/Source/uart_cmsdk_drv.c
       Include file:  Device/Include/uart_cmsdk_drv.h
 
    * Component: ARM::Device:Startup:C Startup:2.0.0
-      Include file:  Device/Include/system_SSE310MPS3.h
-      Source file:   Device/Source/system_SSE310MPS3.c
-      Source file:   Examples/templates/empty_main.c
       Source file:   Device/Source/startup_SSE310MPS3.c
+      Source file:   Device/Source/system_SSE310MPS3.c
+      Include file:  Device/Include/system_SSE310MPS3.h
+      Source file:   Examples/templates/empty_main.c
 
    * Component: Keil.ARM Compiler::Compiler:I/O:STDOUT:Breakpoint:1.2.0
       Source file:   Source/retarget_io.c
