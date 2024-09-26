@@ -22,7 +22,7 @@
  */
 
 #include "SSE310MPS3.h"
-
+ #include "partition_SSE310.h"
 /*----------------------------------------------------------------------------
   Define clocks
  *----------------------------------------------------------------------------*/
@@ -101,7 +101,11 @@ void SystemInit (void)
     */
     SCB_DisableICache();
     SCB_DisableDCache();
-
+		//TZ_SAU_Setup();
+		
+#if defined (__ARM_FEATURE_CMSE) && (__ARM_FEATURE_CMSE == 3U)
+		TZ_SAU_Setup();
+#endif		
     SystemCoreClock = SYSTEM_CLOCK;
     PeripheralClock = PERIPHERAL_CLOCK;
 }

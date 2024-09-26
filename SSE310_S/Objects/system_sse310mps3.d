@@ -15,4 +15,5 @@
   C:\Users\dakum\AppData\Local\Arm\Packs\ARM\V2M_MPS3_SSE_310_BSP\1.4.0\Device\Include\..\..\Board\Platform\platform_base_address.h \
   C:\Users\dakum\AppData\Local\Arm\Packs\ARM\V2M_MPS3_SSE_310_BSP\1.4.0\Device\Include\..\..\Board\Platform\platform_regs.h \
   C:\Users\dakum\AppData\Local\Arm\Packs\ARM\V2M_MPS3_SSE_310_BSP\1.4.0\Device\Include\..\..\Board\Platform\platform_pins.h \
-  C:\Users\dakum\AppData\Local\Arm\Packs\ARM\V2M_MPS3_SSE_310_BSP\1.4.0\Device\Include\system_SSE310MPS3.h
+  C:\Users\dakum\AppData\Local\Arm\Packs\ARM\V2M_MPS3_SSE_310_BSP\1.4.0\Device\Include\system_SSE310MPS3.h \
+  RTE\Device\SSE-310-MPS3_AN555\partition_SSE310.h

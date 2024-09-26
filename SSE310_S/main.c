@@ -57,7 +57,7 @@ int main (void)
   volatile float  x3 = 24.1111118f;
 
   x3 = x3 * (x1 / x2);
-	uint32_t s_msp = 0, s_psp = 0, ns_msp = 0, ns_psp = 0;
+	volatile uint32_t s_msp = 0, s_psp = 0, ns_msp = 0, ns_psp = 0;
 
   /* exercise some core register from Secure Mode */
   s_msp = __get_MSP();
